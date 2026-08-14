@@ -418,29 +418,29 @@
 
     .hero-actions{
       display:flex;
-      align-items:center;
-      gap:18px;
-      flex-wrap:wrap;
+      flex-direction:column;
+      align-items:flex-start;
+      gap:22px;
     }
 
     .hero-google-rating{
-      height:70px;
-      min-width:210px;
-      padding:0 18px;
       display:inline-flex;
       align-items:center;
-      gap:12px;
-      background:#fff;
-      border:1px solid rgba(31,41,46,.10);
-      border-radius:12px;
-      box-shadow:0 12px 30px rgba(31,52,45,.10);
+      gap:10px;
       color:#202124;
-      transition:transform .18s ease,box-shadow .18s ease;
+      line-height:1;
+      transition:transform .18s ease,opacity .18s ease;
     }
 
     .hero-google-rating:hover{
       transform:translateY(-1px);
-      box-shadow:0 16px 34px rgba(31,52,45,.14);
+      opacity:.86;
+    }
+
+    .hero-google-rating:focus-visible{
+      outline:3px solid rgba(49,83,74,.25);
+      outline-offset:5px;
+      border-radius:4px;
     }
 
     .hero-google-icon{
@@ -450,48 +450,18 @@
       flex:none;
     }
 
-    .hero-google-copy{
-      display:grid;
-      gap:4px;
-      line-height:1;
-    }
-
-    .hero-google-label{
-      color:#5f6368;
-      font-size:12px;
-      font-weight:600;
-    }
-
-    .hero-google-score-row{
-      display:flex;
-      align-items:center;
-      gap:8px;
-    }
-
     .hero-google-score{
       color:#202124;
-      font-size:19px;
+      font-size:21px;
       font-weight:700;
-      letter-spacing:-.3px;
+      letter-spacing:-.4px;
     }
 
     .hero-google-stars{
       color:#fbbc04;
-      font-size:15px;
+      font-size:17px;
       letter-spacing:1px;
       white-space:nowrap;
-    }
-
-    @media (max-width:700px){
-      .hero-actions{
-        flex-direction:column;
-        align-items:flex-start;
-      }
-
-      .hero-google-rating{
-        width:100%;
-        max-width:310px;
-      }
     }
 
     .visual{
@@ -1548,11 +1518,11 @@
       flex:none;
       scroll-snap-align:start;
       position:relative;
-      padding-bottom:30px;
     }
 
     .review-card{
       position:relative;
+      width:100%;
       background:#fff;
       padding:34px 34px 38px;
       min-height:286px;
@@ -1567,10 +1537,16 @@
 
     .review-head{
       display:flex;
-      align-items:center;
+      align-items:flex-start;
       justify-content:space-between;
       gap:18px;
       margin-bottom:24px;
+    }
+
+    .review-author{
+      min-width:0;
+      display:grid;
+      gap:6px;
     }
 
     .review-head h3{
@@ -1581,10 +1557,18 @@
       color:#162128;
     }
 
+    .review-card .review-meta{
+      margin:0;
+      color:#85898b;
+      font-size:12px;
+      line-height:1.35;
+    }
+
     .review-stars{
       display:flex;
       gap:3px;
       flex:none;
+      padding-top:1px;
     }
 
     .review-stars span{
@@ -1605,38 +1589,20 @@
       font-weight:400;
     }
 
-    .review-avatar{
-      width:54px;
-      height:54px;
-      border-radius:50%;
-      display:flex;
+    .reviews-google-link{
+      margin-top:28px;
+      display:inline-flex;
       align-items:center;
-      justify-content:center;
-      margin:-20px 0 0 30px;
-      position:relative;
-      z-index:2;
-      box-shadow:0 0 0 5px #f4f6f5,0 8px 18px rgba(31,52,45,.13);
-      background:var(--green);
-      color:#fff;
-      overflow:hidden;
+      gap:9px;
+      color:var(--green-dark);
+      font-size:14px;
+      font-weight:600;
     }
 
-    .review-avatar img{
-      width:100%;
-      height:100%;
-      display:block;
-      object-fit:cover;
-      object-position:center;
+    .reviews-google-link:hover{
+      text-decoration:underline;
+      text-underline-offset:4px;
     }
-
-    .reviews-photo-note{
-      margin:2px 0 0 2px;
-      color:#8a8e8c;
-      font-size:11px;
-      line-height:1.5;
-      letter-spacing:.1px;
-    }
-
 
     .review-platforms{
       display:grid;
@@ -4439,16 +4405,6 @@
           </p>
 
           <div class="hero-actions">
-            <a class="cta" href="tel:+491776409929" aria-label="AD Hausmeisterservice direkt anrufen unter 0177 6409929">
-              <svg class="phone-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M6.4 3.4h3.2l1.9 4.8-2.3 1.7c1.15 2.45 2.92 4.22 5.37 5.37l1.7-2.3 4.8 1.9v3.2c0 1.8-1.45 3.25-3.25 3.15C10.2 20.8 4 14.6 3.6 6.65 3.5 4.85 4.6 3.4 6.4 3.4Z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>
-              </svg>
-              <span class="cta-call-copy">
-                <span>Jetzt direkt anrufen</span>
-                <strong>0177 6409929</strong>
-              </span>
-            </a>
-
             <a class="hero-google-rating" href="https://maps.app.goo.gl/5pMyybkN56yJxQ1Z9" target="_blank" rel="noopener noreferrer" aria-label="AD Hausmeisterservice bei Google Maps: 5,0 von 5 Sternen">
               <svg class="hero-google-icon" viewBox="0 0 24 24" aria-hidden="true">
                 <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09Z"/>
@@ -4456,12 +4412,17 @@
                 <path fill="#FBBC05" d="M5.84 14.09A6.7 6.7 0 0 1 5.49 12c0-.73.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 0 0 1 12c0 1.78.43 3.45 1.18 4.93l2.85-2.22.81-.62Z"/>
                 <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53Z"/>
               </svg>
-              <span class="hero-google-copy">
-                <span class="hero-google-label">Google-Bewertungen</span>
-                <span class="hero-google-score-row">
-                  <strong class="hero-google-score">5,0</strong>
-                  <span class="hero-google-stars" aria-hidden="true">★★★★★</span>
-                </span>
+              <strong class="hero-google-score">5,0</strong>
+              <span class="hero-google-stars" aria-hidden="true">★★★★★</span>
+            </a>
+
+            <a class="cta" href="tel:+491776409929" aria-label="AD Hausmeisterservice direkt anrufen unter 0177 6409929">
+              <svg class="phone-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M6.4 3.4h3.2l1.9 4.8-2.3 1.7c1.15 2.45 2.92 4.22 5.37 5.37l1.7-2.3 4.8 1.9v3.2c0 1.8-1.45 3.25-3.25 3.15C10.2 20.8 4 14.6 3.6 6.65 3.5 4.85 4.6 3.4 6.4 3.4Z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>
+              </svg>
+              <span class="cta-call-copy">
+                <span>Jetzt direkt anrufen</span>
+                <strong>0177 6409929</strong>
               </span>
             </a>
           </div>
@@ -4749,17 +4710,17 @@
     <div class="reviews-shell">
       <div class="reviews-top">
         <div>
-          <p class="reviews-kicker">BEWERTUNGEN</p>
+          <p class="reviews-kicker">GOOGLE-BEWERTUNGEN</p>
           <h2 class="reviews-title" id="bewertungen-title">Zufriedene Kunden sind die beste Empfehlung.</h2>
         </div>
 
-        <div class="reviews-nav" aria-label="Kundenbewertungen durchblättern">
-          <button class="prev" type="button" aria-label="Vorherige Bewertung">
+        <div class="reviews-nav" aria-label="Google-Bewertungen durchblättern">
+          <button class="prev" type="button" aria-label="Vorherige Google-Bewertung">
             <svg viewBox="0 0 42 18" fill="none">
               <path d="M41 9H5M11 3 5 9l6 6" stroke="currentColor" stroke-width="2"/>
             </svg>
           </button>
-          <button class="next" type="button" aria-label="Nächste Bewertung">
+          <button class="next" type="button" aria-label="Nächste Google-Bewertung">
             <svg viewBox="0 0 42 18" fill="none">
               <path d="M1 9h36M31 3l6 6-6 6" stroke="currentColor" stroke-width="2"/>
             </svg>
@@ -4771,82 +4732,111 @@
         <article class="review-card-wrap">
           <div class="review-card">
             <div class="review-head">
-              <h3>Familie Keller</h3>
-              <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span class="off">★</span></div>
+              <div class="review-author">
+                <h3>Jens Keller</h3>
+                <p class="review-meta">1 Rezension · vor 5 Monaten</p>
+              </div>
+              <div class="review-stars" aria-label="5 von 5 Sternen"><span aria-hidden="true">★★★★★</span></div>
             </div>
-            <p>Seit der Betreuung unseres Mehrfamilienhauses sind Treppenhaus und Eingangsbereich zuverlässig sauber. Absprachen werden eingehalten und bei Fragen ist immer jemand erreichbar.</p>
-          </div>
-          <div class="review-avatar" aria-label="Symbolbild zu Familie Keller">
-            <img src="assets/review-familie-keller-v1.webp" alt="" loading="lazy" decoding="async" onerror="this.onerror=function(){this.style.display='none'};this.src='assets/review-familie-keller-v1.png'">
+            <p>Wir verwalten mehrere Immobilien in Kreis Reiskirchen und haben jemand gesucht der sauber arbeitet und wirklich vertrauenswürdig ist. Seit 3 Monaten nehmen wir die Dienstleistung von AD hausmeisterservice in Anspruch und unsere Mieter sind mehr als zufrieden. Jede Arbeit wird sauber durchgeführt und wir müssen nicht hundertmal hinterher telefonieren. Kann man wirklich weiterempfehlen.</p>
           </div>
         </article>
 
         <article class="review-card-wrap">
           <div class="review-card">
             <div class="review-head">
-              <h3>Sofia Becker</h3>
-              <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span class="off">★</span></div>
+              <div class="review-author">
+                <h3>L. Huskaj</h3>
+                <p class="review-meta">6 Rezensionen · 1 Foto · vor 4 Monaten</p>
+              </div>
+              <div class="review-stars" aria-label="5 von 5 Sternen"><span aria-hidden="true">★★★★★</span></div>
             </div>
-            <p>Die Außenanlage sieht endlich dauerhaft gepflegt aus. Rasen, Gehwege und Laub werden regelmäßig gemacht und auch kleine Dinge am Objekt werden direkt angesprochen.</p>
-          </div>
-          <div class="review-avatar" aria-label="Symbolbild zu Sofia Becker">
-            <img src="assets/review-sofia-becker-v1.webp" alt="" loading="lazy" decoding="async" onerror="this.onerror=function(){this.style.display='none'};this.src='assets/review-sofia-becker-v1.png'">
+            <p>Ich habe sehr gute Erfahrungen mit diesem Hausmeisterservice gemacht. Die Arbeiten wurden stets zuverlässig, pünktlich und sehr sorgfältig ausgeführt. Besonders hervorheben möchte ich die freundliche Kommunikation und die schnelle …</p>
           </div>
         </article>
 
         <article class="review-card-wrap">
           <div class="review-card">
             <div class="review-head">
-              <h3>Thomas Brandt</h3>
-              <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span class="off">★</span></div>
+              <div class="review-author">
+                <h3>Johannes Yakut</h3>
+                <p class="review-meta">4 Rezensionen · vor 4 Monaten</p>
+              </div>
+              <div class="review-stars" aria-label="5 von 5 Sternen"><span aria-hidden="true">★★★★★</span></div>
             </div>
-            <p>Beim Winterdienst können wir uns darauf verlassen, dass Wege und Eingänge rechtzeitig geräumt und gestreut sind. Schnell, unkompliziert und zuverlässig.</p>
-          </div>
-          <div class="review-avatar" aria-label="Symbolbild zu Thomas Brandt">
-            <img src="assets/review-thomas-brandt-v1.webp" alt="" loading="lazy" decoding="async" onerror="this.onerror=function(){this.style.display='none'};this.src='assets/review-thomas-brandt-v1.png'">
+            <p>Der Hausmeisterservice hat hervorragende Arbeit geleistet – zuverlässig, schnell und sehr gründlich. Die Kommunikation war immer freundlich und unkompliziert, Termine wurden pünktlich eingehalten. Besonders beeindruckt hat mich die saubere …</p>
           </div>
         </article>
 
         <article class="review-card-wrap">
           <div class="review-card">
             <div class="review-head">
-              <h3>Julia Neumann</h3>
-              <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span class="off">★</span></div>
+              <div class="review-author">
+                <h3>Ke Ar</h3>
+                <p class="review-meta">12 Rezensionen · vor 4 Monaten</p>
+              </div>
+              <div class="review-stars" aria-label="5 von 5 Sternen"><span aria-hidden="true">★★★★★</span></div>
             </div>
-            <p>Kleine Reparaturen und regelmäßige Kontrollen werden unkompliziert mit erledigt. Besonders gut finden wir die klare Kommunikation und die schnelle Rückmeldung.</p>
-          </div>
-          <div class="review-avatar" aria-label="Symbolbild zu Julia Neumann">
-            <img src="assets/review-julia-neumann-v1.webp" alt="" loading="lazy" decoding="async" onerror="this.onerror=function(){this.style.display='none'};this.src='assets/review-julia-neumann-v1.png'">
+            <p>Super zufrieden seit Monaten für unsere Anlage zuständig und immer alles sauber erledigt. Man muss nicht wie bei anderen Firmen nachhaken hier wird alles automatisch erledigt. Nur zu empfehlen!!</p>
           </div>
         </article>
 
         <article class="review-card-wrap">
           <div class="review-card">
             <div class="review-head">
-              <h3>Michael Krüger</h3>
-              <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+              <div class="review-author">
+                <h3>Ron Mujaj</h3>
+                <p class="review-meta">5 Rezensionen · vor 4 Monaten</p>
+              </div>
+              <div class="review-stars" aria-label="5 von 5 Sternen"><span aria-hidden="true">★★★★★</span></div>
             </div>
-            <p>Die Betreuung läuft sehr unkompliziert. Termine werden eingehalten, Rückfragen schnell beantwortet und unser Objekt wirkt dauerhaft ordentlich und gepflegt.</p>
-          </div>
-          <div class="review-avatar" aria-label="Symbolbild zu Michael Krüger">
-            <img src="assets/review-michael-krueger-v1.webp" alt="" loading="lazy" decoding="async" onerror="this.onerror=function(){this.style.display='none'};this.src='assets/review-michael-krueger-v1.png'">
+            <p>Top Arbeit! Arbeite bereits bei 2 Mehrfamilienhäusern mit AD Hausmeisterservice zusammen. Nur positive Rückmeldung meiner Mieter erhalten. Es wird sich wirklich von A-Z für alles gekümmert und mir wurde dadurch sehr viel Stress und Arbeit …</p>
           </div>
         </article>
 
         <article class="review-card-wrap">
           <div class="review-card">
             <div class="review-head">
-              <h3>Anna Schneider</h3>
-              <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+              <div class="review-author">
+                <h3>Loni H</h3>
+                <p class="review-meta">11 Rezensionen · vor 5 Monaten</p>
+              </div>
+              <div class="review-stars" aria-label="5 von 5 Sternen"><span aria-hidden="true">★★★★★</span></div>
             </div>
-            <p>Wir schätzen besonders die verlässlichen Absprachen und die saubere Arbeit. Auch bei kurzfristigen Anliegen bekommen wir schnell eine Rückmeldung.</p>
+            <p>Der AD Hausmeisterservice macht seine Arbeit ordentlich und ist zuverlässig. Bei Problemen wird schnell geholfen. Kann man echt weiterempfehlen</p>
           </div>
-          <div class="review-avatar" aria-label="Symbolbild zu Anna Schneider">
-            <img src="assets/review-anna-schneider-v1.webp" alt="" loading="lazy" decoding="async" onerror="this.onerror=function(){this.style.display='none'};this.src='assets/review-anna-schneider-v1.png'">
+        </article>
+
+        <article class="review-card-wrap">
+          <div class="review-card">
+            <div class="review-head">
+              <div class="review-author">
+                <h3>Gutachten Huskaj</h3>
+                <p class="review-meta">4 Rezensionen · vor 5 Monaten</p>
+              </div>
+              <div class="review-stars" aria-label="5 von 5 Sternen"><span aria-hidden="true">★★★★★</span></div>
+            </div>
+            <p>Kann ich nur wärmstens empfehlen. Herr Dulla ist sehr nett, pünktlich und zuvorkommend.</p>
+          </div>
+        </article>
+
+        <article class="review-card-wrap">
+          <div class="review-card">
+            <div class="review-head">
+              <div class="review-author">
+                <h3>Besim</h3>
+                <p class="review-meta">4 Rezensionen · vor 6 Monaten</p>
+              </div>
+              <div class="review-stars" aria-label="5 von 5 Sternen"><span aria-hidden="true">★★★★★</span></div>
+            </div>
+            <p>Sehr freundliches Team. Immer pünktlich und zuverlässig. Sehr Emphelenswert!</p>
           </div>
         </article>
       </div>
-      <p class="reviews-photo-note">Profilbilder sind Symbolbilder.</p>
+
+      <a class="reviews-google-link" href="https://maps.app.goo.gl/5pMyybkN56yJxQ1Z9" target="_blank" rel="noopener noreferrer">
+        Alle Rezensionen auf Google ansehen
+      </a>
     </div>
   </section>
 
