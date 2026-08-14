@@ -341,16 +341,23 @@
       display:inline-block;
     }
 
-    .accent::after{
-      content:"";
+    .accent-underline{
       position:absolute;
-      height:6px;
-      background:var(--green);
-      border-radius:999px;
-      left:0;
-      right:0;
-      bottom:-9px;
-      transform:rotate(-2deg);
+      left:-.5%;
+      bottom:-20px;
+      width:101%;
+      height:28px;
+      overflow:visible;
+      pointer-events:none;
+    }
+
+    .accent-underline path{
+      fill:none;
+      stroke:var(--green);
+      stroke-width:6;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+      vector-effect:non-scaling-stroke;
     }
 
     .lead{
@@ -3943,9 +3950,13 @@
         letter-spacing:-1.9px;
       }
 
-      .hero .accent::after{
-        height:4px;
-        bottom:-7px;
+      .hero .accent-underline{
+        bottom:-15px;
+        height:20px;
+      }
+
+      .hero .accent-underline path{
+        stroke-width:4;
       }
 
       .hero .cta{
@@ -4326,7 +4337,7 @@
           <h1>
             Professioneller<br>
             Hausmeisterservice<br>
-            <span class="accent">in Reiskirchen &amp; Gießen</span>
+            <span class="accent">in Reiskirchen &amp; Gießen<svg class="accent-underline" viewBox="0 0 100 24" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M 1 16 C 26 5, 67 3, 99 11"></path></svg></span>
           </h1>
 
           <p class="lead">
