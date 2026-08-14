@@ -4232,6 +4232,14 @@
     /* ===== Hero artwork v2 ===== */
     .hero::after{
       display:block;
+      width:50%;
+      clip-path:polygon(18% 0,100% 0,100% 100%,0 100%);
+    }
+
+    @media (min-width:821px){
+      .hero-content{
+        transform:translateY(-28px);
+      }
     }
 
     .hero .visual{
