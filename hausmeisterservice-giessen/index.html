@@ -5620,7 +5620,7 @@
   function updateSeo(page) {
     const seo = seoConfig[page] || seoConfig.home;
     const canonical = document.querySelector('link[rel="canonical"]');
-    const canonicalUrl = new URL(seo.path, window.location.origin).href;
+    const canonicalUrl = new URL(seo.path, 'https://www.ad-hausmeister.de').href;
     const socialImageUrl = new URL('/assets/about-outdoor-care-v2.png', window.location.origin).href;
     document.title = seo.title;
     setMeta('meta[name="description"]', seo.description);
