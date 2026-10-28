@@ -4565,49 +4565,25 @@
     }
 
     
-    /* Gießen: Leistungsüberschrift und Anfrage-Button zentral ausrichten */
-    .services-section .services-heading-row{
-      justify-content:center;
-      align-items:center;
-      text-align:center;
+    /* Gießen: Überschrift und CTA zentral über den gesamten Leistungsbereich */
+    .services-section .services-heading-row{justify-content:center;align-items:center;text-align:center}
+    .services-section .services-heading-row > div{width:100%}
+    .services-section .services-kicker,.services-section .services-title{text-align:center}
+    .services-section .services-title{max-width:100%;margin-left:auto;margin-right:auto}
+    .services-section .service-feature,.services-section .service-feature.active{min-height:0;padding-bottom:24px}
+    .services-section .service-cta-row{
+      width:100%;display:flex;align-items:center;justify-content:center;margin-top:38px;
     }
-    .services-section .services-heading-row > div{
-      width:100%;
+    .services-section .service-cta-row .service-more{
+      position:static;display:inline-flex;width:auto;min-width:192px;height:50px;
+      padding:0 22px;margin:0;border-radius:8px;left:auto;right:auto;bottom:auto;
     }
-    .services-section .services-kicker,
-    .services-section .services-title{
-      text-align:center;
-    }
-    .services-section .services-title{
-      max-width:100%;
-      margin-left:auto;
-      margin-right:auto;
-    }
-    .services-section .service-feature.active{
-      padding-bottom:30px;
-    }
-    .services-section .service-feature.active .service-more{
-      position:static;
-      width:fit-content;
-      max-width:100%;
-      min-width:180px;
-      padding:0 20px;
-      margin:40px auto 0;
-      border-radius:8px;
-      left:auto;
-      right:auto;
-      bottom:auto;
-    }
-    @media (max-width:560px){
-      .services-section .service-feature.active{
-        padding-bottom:26px;
-      }
-      .services-section .service-feature.active .service-more{
-        margin:36px auto 0;
-      }
+    @media(max-width:560px){
+      .services-section .service-feature,.services-section .service-feature.active{padding-bottom:26px}
+      .services-section .service-cta-row{margin-top:24px}
     }
 
-  </style>
+      </style>
 </head>
 
 <body>
@@ -4800,7 +4776,6 @@
           </div>
           <h3>Treppenhausreinigung &amp;<br>Gemeinschaftsflächen</h3>
           <p>Wir reinigen Treppenhäuser und Gemeinschaftsflächen in Gießener Mehrfamilienhäusern und Wohnanlagen. Dazu gehören nach Vereinbarung Eingänge, Flure, Keller und Waschküchen. Welche Flächen wie häufig gereinigt werden, stimmen wir auf Ihr Objekt ab.</p>
-          <a class="service-more" href="#kontaktformular" data-contact-open>Kontakt aufnehmen</a>
         </article>
 
         <article class="service-feature">
@@ -4850,6 +4825,9 @@
           <h3>Kleinreparaturen &amp;<br>Objektkontrolle</h3>
           <p>Wir prüfen vereinbarte Objektbereiche auf sichtbare Schäden und Auffälligkeiten, etwa an Türen, Beleuchtung oder Gemeinschaftsflächen. Kleinere zulässige Reparaturen führen wir nach Absprache aus. Arbeiten für Fachbetriebe gehören nicht dazu.</p>
         </article>
+      </div>
+      <div class="service-cta-row">
+        <a class="service-more" href="#kontaktformular" data-contact-open>Kontakt aufnehmen</a>
       </div>
     </div>
   </section>
