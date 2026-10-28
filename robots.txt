@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ad-hausmeister.de/sitemap.xml
+Sitemap: https://www.ad-hausmeister.de/sitemap.xml
