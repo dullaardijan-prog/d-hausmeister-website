@@ -4564,7 +4564,50 @@
       .object-check-lead{font-size:1rem}
     }
 
-      </style>
+    
+    /* Gießen: Leistungsüberschrift und Anfrage-Button zentral ausrichten */
+    .services-section .services-heading-row{
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+    }
+    .services-section .services-heading-row > div{
+      width:100%;
+    }
+    .services-section .services-kicker,
+    .services-section .services-title{
+      text-align:center;
+    }
+    .services-section .services-title{
+      max-width:100%;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .services-section .service-feature.active{
+      padding-bottom:30px;
+    }
+    .services-section .service-feature.active .service-more{
+      position:static;
+      width:fit-content;
+      max-width:100%;
+      min-width:180px;
+      padding:0 20px;
+      margin:24px auto 0;
+      border-radius:8px;
+      left:auto;
+      right:auto;
+      bottom:auto;
+    }
+    @media (max-width:560px){
+      .services-section .service-feature.active{
+        padding-bottom:26px;
+      }
+      .services-section .service-feature.active .service-more{
+        margin:24px auto 0;
+      }
+    }
+
+  </style>
 </head>
 
 <body>
