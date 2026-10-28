@@ -7,7 +7,7 @@
   <meta name="description" content="Hausmeisterservice für Reiskirchen und Gießen: Treppenhausreinigung, Grünpflege, Winterdienst und Kleinreparaturen für Wohn- und Gewerbeobjekte.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#31534a">
-  <link rel="canonical" href="/">
+  <link rel="canonical" href="https://www.ad-hausmeister.de/">
   <link rel="icon" type="image/png" href="assets/ad-hausmeisterservice-logo.png">
 
   <meta property="og:locale" content="de_DE">
@@ -15,7 +15,7 @@
   <meta property="og:site_name" content="AD Hausmeisterservice">
   <meta property="og:title" content="Hausmeisterservice Reiskirchen &amp; Gießen | AD">
   <meta property="og:description" content="Treppenhausreinigung, Außenanlagenpflege, Winterdienst und Kleinreparaturen für Wohnanlagen, Mehrfamilienhäuser und Gewerbeobjekte in Reiskirchen, Gießen und Umgebung.">
-  <meta property="og:url" content="/">
+  <meta property="og:url" content="https://www.ad-hausmeister.de/">
   <meta property="og:image" content="assets/about-outdoor-care-v2.png">
   <meta property="og:image:alt" content="AD Hausmeisterservice bei der Objektpflege">
 
@@ -5009,6 +5009,7 @@
         <p class="local-service-area-kicker">EINSATZGEBIET</p>
         <h2>Hausmeisterservice in <span class="area-highlight">Reiskirchen, Gießen</span> und Umgebung</h2>
         <p>Von unserem Standort in Reiskirchen betreuen wir Wohnanlagen, Mehrfamilienhäuser und Gewerbeobjekte in Reiskirchen, Gießen und der näheren Umgebung. Ob regelmäßige Objektpflege oder saisonaler Winterdienst: Umfang, Termine und Intervalle stimmen wir passend zu Ihrem Objekt ab.</p>
+        <p><a href="/hausmeisterservice-giessen/" class="giessen-service-link" style="color:#f8e7aa;text-decoration:underline;text-underline-offset:3px;font-weight:700;">Mehr zum Hausmeisterservice in Gießen</a></p>
         <a class="local-service-area-cta" href="#kontaktformular" data-contact-open>
           <span>Einsatz anfragen</span>
           <span class="local-service-area-cta-icon" aria-hidden="true">
@@ -5280,6 +5281,7 @@
           <h3>Navigation</h3>
           <nav>
             <a href="/">Startseite</a>
+            <a href="/hausmeisterservice-giessen/">Hausmeisterservice Gießen</a>
             <a href="#leistungen">Leistungen</a>
             <a href="#ueber-uns" class="nav-light">Über uns</a>
             <a href="#kontakt" class="nav-light">Kontakt</a>
@@ -5588,7 +5590,7 @@
   function updateSeo(page) {
     const seo = seoConfig[page] || seoConfig.home;
     const canonical = document.querySelector('link[rel="canonical"]');
-    const canonicalUrl = new URL(seo.path, window.location.origin).href;
+    const canonicalUrl = new URL(seo.path, 'https://www.ad-hausmeister.de').href;
     const socialImageUrl = new URL('/assets/about-outdoor-care-v2.png', window.location.origin).href;
     document.title = seo.title;
     setMeta('meta[name="description"]', seo.description);
