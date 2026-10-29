@@ -1,5 +1,18 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "ad-hausmeister.de"
+        }
+      ],
+      "destination": "https://www.ad-hausmeister.de/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/impressum.html",
