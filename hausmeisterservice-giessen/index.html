@@ -27,6 +27,26 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Startseite",
+      "item": "https://www.ad-hausmeister.de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Hausmeisterservice Gießen",
+      "item": "https://www.ad-hausmeister.de/hausmeisterservice-giessen/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
   "@id": "/#business",
   "name": "AD Hausmeisterservice",
@@ -4589,7 +4609,23 @@
       .services-section .service-cta-row{margin-top:24px}
     }
 
-      </style>
+        /* Unauffälliger Navigationspfad für die eigenständige Gießen-Seite */
+    .giessen-breadcrumb{
+      display:flex;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:9px;
+      margin:0 0 22px;
+      font-size:13px;
+      font-weight:500;
+      line-height:1.5;
+      color:rgba(255,255,255,.9);
+    }
+    .giessen-breadcrumb a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+    .giessen-breadcrumb a:hover,.giessen-breadcrumb a:focus-visible{color:#fff}
+    @media(max-width:600px){.giessen-breadcrumb{font-size:12px;margin-bottom:15px}}
+
+  </style>
 </head>
 
 <body>
@@ -4617,6 +4653,11 @@
 
       <div class="hero-content">
         <div class="copy">
+          <nav class="giessen-breadcrumb" aria-label="Brotkrumennavigation">
+            <a href="/">Startseite</a>
+            <span aria-hidden="true">›</span>
+            <span aria-current="page">Hausmeisterservice Gießen</span>
+          </nav>
           <h1>
             Hausmeisterservice<br>
             in Gießen<br>
