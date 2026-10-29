@@ -13,20 +13,6 @@
       "permanent": true
     }
   ],
-  "rewrites": [
-    {
-      "source": "/impressum.html",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/datenschutz.html",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/cookies.html",
-      "destination": "/index.html"
-    }
-  ],
   "headers": [
     {
       "source": "/assets/(.*)",
